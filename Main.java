@@ -1,20 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        Submarine submarine = new Submarine();
+        sea();
+        air();
+    }
+    public static void sea() {
+        SeaNavigation[] seaNavigation = SeaNavigation.values();
 
-        switch (submarine.getSeaNavigation) {
-            case NORTH:
-                System.out.println(SeaNavigation.NORTH);
-                break;
-            case SOUTH:
-                System.out.println(SeaNavigation.SOUTH);
-                break;
-            case WEST:
-                System.out.println(SeaNavigation.WEST);
-                break;
-            case EAST:
-                System.out.println(SeaNavigation.EAST);
-                break;
+        for (SeaNavigation i : SeaNavigation.values()) {
+            System.out.println("По команде " + i.name() + " " + i.getS());
+        }
+    }
+    public static void air() {
+        AirNavigation[] airNavigation = AirNavigation.values();
+
+        for (AirNavigation i : AirNavigation.values()) {
+            System.out.println(i.getInfo()  + i.getPeleng());
         }
     }
 }

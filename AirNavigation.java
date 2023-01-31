@@ -1,8 +1,21 @@
 public enum AirNavigation {
-    HEIGHT("Высота 5000", 5000),
-    SPEED("Скорость 850, идем на сверхзвуке!", 850);
+    HEIGHT("Высота ", 5000),
+    SPEED("Идем на сверхзвуке! Скорость ", 850);
 
-    AirNavigation(String s, int i) {
+private String info;
+private int peleng;
+
+    AirNavigation(String info, int peleng) {
+        this.info = info;
+        this.peleng = peleng;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public int getPeleng() {
+        return peleng;
     }
 }
 
